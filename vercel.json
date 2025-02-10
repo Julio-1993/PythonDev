@@ -7,7 +7,7 @@
     },
     {
         "src": "build_files.sh",
-        "use": "@vercel/construção estática",
+        "use": "@vercel/static-build",
         "config": {
             "distDir": "staticfiles_build"}
     }
@@ -15,7 +15,11 @@
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/static/$1"},
-    {"src": "/(.*)",
-    "dest": "Criandoforms/wsgi.py"}]}
-    
+            "dest": "/static/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "Criandoforms/wsgi.py"
+        }
+    ]
+}
