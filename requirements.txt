@@ -5,14 +5,10 @@ Django==5.1.5
 dj-database-url==2.3.0
 jsonpointer==2.1
 lxml==5.2.1
-matplotlib==3.9.2
 pyls-spyder==0.4.0
 mkl-service==2.4.2
 protobuf==4.25.3
 psycopg2-binary==2.9.10
-pyasn1-modules==0.2.8
-PyQtWebEngine==5.15.6
-PyQt5==5.15.10
 setuptools==75.8.0
 sqlparse==0.5.3
 tzdata==2025.1
