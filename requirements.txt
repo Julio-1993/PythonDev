@@ -7,7 +7,7 @@ jsonpointer==2.1
 lxml==5.2.1
 matplotlib==3.9.2
 pyls-spyder==0.4.0
-mkl-service==2.4.0
+mkl-service==2.4.2
 protobuf==4.25.3
 psycopg2-binary==2.9.10
 pyasn1-modules==0.2.8
