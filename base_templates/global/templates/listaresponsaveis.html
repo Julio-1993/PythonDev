@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Responsaveis</title>
+</head>
+<body>
+    <h1>Lista de Responsaveis</h1>
+    <hr>
+    <br>
+    {% for responsavel in responsaveis %}
+    <ul>
+        <li>
+            Nome: 
+            <a href="{% url 'atualiza_responsavel' responsavel.id %}">{{responsavel.nome}}</a>
+        </li>
+    </ul>
+    {% endfor %}
+</html>
