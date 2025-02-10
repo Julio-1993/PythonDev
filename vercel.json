@@ -1,13 +1,21 @@
 {
-    "builds": [{
-        "src":"Criandoforms/wsgi.py",
-        "use":"@vercel/python",
-        "config": {"maxLambdaSize": "15mb", "runtime":"python3.11"}
-    }],
-    "routes":[
+    "versão": 2,
+    "builds": [
         {
-            "src":"/(.*)",
-            "dest":"Criandoforms/wsgi.py"
-        }
-    ]
-}
+            "src": "Criandoforms/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
+    },
+    {
+        "src": "build_files.sh",
+        "use": "@vercel/construção estática",
+        "config": {
+            "distDir": "staticfiles_build"}
+    }
+    ],
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"},
+    {"src": "/(.*)",
+    "dest": "Criandoforms/wsgi.py"}]}
