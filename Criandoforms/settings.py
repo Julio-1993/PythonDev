@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-%c@c6wlu9gsbt$#21*h^$lk)7hze-qgok8v$-8zzyig7phwntq"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1','.vercel.app','now.sh']
 
 
 # Application definition
@@ -77,11 +77,21 @@ WSGI_APPLICATION = "Criandoforms.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+     "default": {
+         "ENGINE": "django.db.backends.postgresql",
+         "NAME": "railway",
+         "USER": "postgres",
+         "PASSWORD":"nDKofYZKLwDXDQzrZquPiYSPfcKiAChL",
+         "HOST":"autorack.proxy.rlwy.net",
+         "PORT":"18173",
+     }
+ }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
@@ -120,6 +130,9 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATICFILES_DIRS =[os.path.join(BASE_DIR,'static')]
+
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
