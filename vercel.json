@@ -1,5 +1,4 @@
 {
-    "versão": 2,
     "builds": [
         {
             "src": "Criandoforms/wsgi.py",
@@ -19,3 +18,4 @@
             "dest": "/static/$1"},
     {"src": "/(.*)",
     "dest": "Criandoforms/wsgi.py"}]}
+    
